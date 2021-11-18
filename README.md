@@ -4,7 +4,7 @@ ticket manager built using flask api
 # SETUP
 1. Checkout the main branch in your ide
 2. create a .env - you can copy .envexample and fill with your secret key and postgres db details
-3. in your terminal `run make install` -- ensure your are in your venv :)
+3. in your terminal run `make install` -- ensure your are in your venv :)
 4. then run `make migration setup` - this will setup your db for migrations and establish the connection is live
 5. then run `make migration` - this will setup your tables based on the models
 6. Finally, run `make apply migration` - this will apply the migration to your database
