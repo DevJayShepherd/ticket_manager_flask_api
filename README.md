@@ -12,7 +12,6 @@ ticket manager built using flask api
 Next you can use the curl requests below to interact with the API (I was going to setup swagger to make it easier, but the yaml files are tedious with flask and somewhat time consuming)
 
 
-# CURL requests if preffered to interact with endpoints
 # CURL requests if preffered to interact with endpoints -- replace <something here>
 
 Add an event;
