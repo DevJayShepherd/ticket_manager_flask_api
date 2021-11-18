@@ -36,7 +36,12 @@ curl --location --request GET 'http://127.0.0.1:5000/app/v1/events/check_event/<
 Add tickets to exisitng event;
 
 ```
-  curl --location --request GET 'http://127.0.0.1:5000/app/v1/events/check_event/2'
+  curl --location --request POST 'http://127.0.0.1:5000/app/v1/events/add_tickets/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "event": "event_5",
+    "number_of_tickets": 50
+}'
   ```
 
 Redeem a ticket;
