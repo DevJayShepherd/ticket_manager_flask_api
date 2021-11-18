@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from api.core import db
+from app.settings import db
 
 
 class Event(db.Model):

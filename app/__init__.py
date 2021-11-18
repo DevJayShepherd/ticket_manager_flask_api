@@ -1,15 +1,15 @@
 import os
 from flask import Flask
 from flask_migrate import Migrate
-from api.core import db
+from app.settings import db
 
-from api.events.events import events
-from api.tickets.tickets import tickets
+from app.routes.events import events
+from app.routes.tickets import tickets
 
-from api.models.ticket_model import Ticket
-from api.models.event_model import Event
+from app.models.ticket_model import Ticket
+from app.models.event_model import Event
 
-from api.core import DATABASE_URL
+from app.settings import DATABASE_URL
 
 migrate = Migrate()
 
