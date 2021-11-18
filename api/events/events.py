@@ -25,13 +25,13 @@ def event_status(event):
     return {'event_name': 'will go here!', 'tickets': 123}
 
 
-@events.post('/add_tickets/<int:event_id>')
+@events.post('/add_tickets/')
 def add_tickets(event):
     """
     Add more tickets to an event.
     """
-    event = event
-    number_of_tickets = date = request.json['number_of_tickets']
+    event = request.json['event']
+    number_of_tickets = request.json['number_of_tickets']
 
     return {'detail': 'success!'}
 
