@@ -15,18 +15,29 @@ Next you can use the curl requests below to interact with the API (I was going t
 # CURL requests if preffered to interact with endpoints -- replace <something here>
 
 Add an event;
+  
+```
+  curl --location --request POST 'http://127.0.0.1:5000/app/v1/events/add_event' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "event_5",
+    "date": "21/01/2022",
+    "number_of_tickets": 100
+}'
+  ```
 
-@@ -22,7 +30,7 @@ Check an event status;
+Check an event status;
 
 
 ```
-curl --location --request GET 'http://127.0.0.1:5000/app/v1/events/check_event/2'
 curl --location --request GET 'http://127.0.0.1:5000/app/v1/events/check_event/<event_id>'
 ```
+  
+Add tickets to exisitng event;
 
-@@ -38,9 +46,14 @@ curl --location --request POST 'http://127.0.0.1:5000/app/v1/events/add_tickets/
-}'
 ```
+  curl --location --request GET 'http://127.0.0.1:5000/app/v1/events/check_event/2'
+  ```
 
 Redeem a ticket;
 ```
@@ -37,6 +48,5 @@ Check ticket status;
 
 
 ```
-curl --location --request GET 'http://127.0.0.1:5000/app/v1/tickets/check_ticket/133299'
 curl --location --request GET 'http://127.0.0.1:5000/app/v1/tickets/check_ticket/<ticket_number>'
 ```
